@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiloni Kariyakarawana — UX/UI Designer</title>
+  <meta name="description" content="Intern UX/UI Designer based in Nugegoda, Sri Lanka. Specializing in interaction design, usability research, and building inclusive digital experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ FLOATING WIDGETS ============ -->
+  <div class="floating-widgets">
+    <div class="widget speak-widget">
+      <div class="widget-label">Reach out</div>
+      <div class="widget-sub">Email or connect</div>
+      <div class="widget-actions">
+        <a href="mailto:thilonikariyakarawana@gmail.com" class="widget-btn" id="email-btn" title="Email">✉</a>
+        <a href="tel:+94706902787" class="widget-btn" id="call-btn" title="Call">📞</a>
+      </div>
+    </div>
+    <a href="https://www.behance.net" target="_blank" class="widget template-widget" id="template-btn">🎨 Behance</a>
+    <a href="https://www.linkedin.com" target="_blank" class="widget framer-badge" id="framer-badge">💼 LinkedIn</a>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <div class="nav-avatar-fallback" style="display:flex">TK</div>
+        <span>Thiloni Kariyakarawana</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-cta" id="nav-contact">Contact</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>
+      <span>Open to opportunities · Sri Lanka</span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <h1 class="hero-heading">
+          <span class="heading-light">Design that</span>
+          <span class="heading-bold">puts people first.</span>
+        </h1>
+        <p class="hero-tagline"><strong>UX/UI Designer focused on research-driven, inclusive design.</strong> I craft digital experiences grounded in usability testing, design thinking, and real user needs.</p>
+        <a href="mailto:thilonikariyakarawana@gmail.com" class="btn btn-dark hero-cta" id="hero-cta">
+          <span class="btn-avatar-initial">TK</span>
+          Let's connect
+        </a>
+      </div>
+      <div class="hero-image reveal">
+        <img src="hero_mockup.png" alt="UX/UI design project mockup" class="hero-mockup parallax-img" id="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUSTED BY — INFINITE MARQUEE ============ -->
+  <section class="trusted-by" id="trusted">
+    <p class="trusted-label">Worked with &amp; trusted by</p>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="marquee-track">
+        <div class="logo-item"><span class="logo-icon">🏢</span><span class="logo-text">RenuXpert Esthetics</span></div>
+        <div class="logo-item"><span class="logo-icon">🎓</span><span class="logo-text">Uni of Sri Jayewardenepura</span></div>
+        <div class="logo-item"><span class="logo-icon">🌐</span><span class="logo-text">Google UX Design</span></div>
+        <div class="logo-item"><span class="logo-icon">🧠</span><span class="logo-text">Entre Club</span></div>
+        <div class="logo-item"><span class="logo-icon">🏛</span><span class="logo-text">SITC Campus</span></div>
+        <div class="logo-item"><span class="logo-icon">⚡</span><span class="logo-text">Figma</span></div>
+        <div class="logo-item"><span class="logo-icon">🖼</span><span class="logo-text">Framer</span></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-item"><span class="logo-icon">🏢</span><span class="logo-text">RenuXpert Esthetics</span></div>
+        <div class="logo-item"><span class="logo-icon">🎓</span><span class="logo-text">Uni of Sri Jayewardenepura</span></div>
+        <div class="logo-item"><span class="logo-icon">🌐</span><span class="logo-text">Google UX Design</span></div>
+        <div class="logo-item"><span class="logo-icon">🧠</span><span class="logo-text">Entre Club</span></div>
+        <div class="logo-item"><span class="logo-icon">🏛</span><span class="logo-text">SITC Campus</span></div>
+        <div class="logo-item"><span class="logo-icon">⚡</span><span class="logo-text">Figma</span></div>
+        <div class="logo-item"><span class="logo-icon">🖼</span><span class="logo-text">Framer</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECENT WORK / PROJECTS ============ -->
+  <section class="recent-work" id="work">
+    <div class="work-header reveal">
+      <div>
+        <p class="section-eyebrow">Selected Projects</p>
+        <h2 class="section-heading" style="margin-bottom:0">Research-backed design.</h2>
+      </div>
+      <a href="https://www.behance.net" target="_blank" class="view-all-link" id="view-all">View all on Behance ↗</a>
+    </div>
+    <div class="projects-grid">
+      <!-- Project 1: Mobile Usability Research -->
+      <div class="project-card reveal stagger-1" id="project-1">
+        <div class="project-image">
+          <img src="hero_mockup.png" alt="Mobile Usability Research project" class="parallax-img" />
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">UX Research</span>
+            <span class="tag">A/B Testing</span>
+            <span class="tag">Ongoing</span>
+          </div>
+          <h2 class="project-name">Mobile Usability Research</h2>
+          <p class="project-desc">Designing & validating an Integrative Usability Framework (IUF) via A/B testing with 152 participants aged 45+. Early findings confirm higher task success rates & lower error rates over standard mobile UI.</p>
+          <a href="#" class="btn btn-dark project-btn">View Project ↗</a>
+        </div>
+      </div>
+      <!-- Project 2: University Room Booking App -->
+      <div class="project-card reveal stagger-2" id="project-2">
+        <div class="project-image">
+          <img src="mugen_project.png" alt="University Room Booking App" class="parallax-img" />
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag">UX/UI Design</span>
+            <span class="tag">Design Thinking</span>
+          </div>
+          <h2 class="project-name">University Room Booking App</h2>
+          <p class="project-desc">Digitized a fully manual booking system using the Design Thinking cycle — validated by 5–10 users with 0 critical errors and task completion under 60 seconds. Includes Light & Dark Mode.</p>
+          <a href="#" class="btn btn-outline project-btn">View Project ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 — full width -->
+    <div class="projects-grid" style="margin-top: 20px;">
+      <div class="project-card reveal stagger-1" id="project-3" style="grid-column: 1 / -1;">
+        <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap: 0; align-items: stretch;">
+          <div class="project-image" style="aspect-ratio: 16/9; border-radius: 0;">
+            <img src="hero_mockup.png" alt="Institute Management System" class="parallax-img" />
+          </div>
+          <div class="project-info" style="padding: 40px 48px;">
+            <div class="project-tags">
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Design Thinking</span>
+            </div>
+            <h2 class="project-name">Institute Management System</h2>
+            <p class="project-desc">Unified students, parents, and teachers into a single platform using Figma and the Design Thinking process, integrating marks tracking and in-app messaging to replace fragmented manual communication. 10 users completed tasks in under 90 seconds.</p>
+            <a href="#" class="btn btn-dark project-btn">View Project ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="testimonial-section" id="testimonial">
+    <div class="container">
+      <div class="testimonial-card reveal">
+        <blockquote class="testimonial-text">
+          "Thiloni brought exceptional attention to detail and a deep understanding of user needs — her research-backed approach elevated our design process and consistently delivered results that resonated with real users."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">RE</div>
+          <div class="author-info">
+            <span class="author-name">RenuXpert Esthetics</span>
+            <span class="author-role">Client · Sterling, VA, United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS & TOOLS ============ -->
+  <section class="services-section" id="skills">
+    <div class="container">
+      <div class="services-layout">
+        <div class="services-left reveal">
+          <p class="section-eyebrow">Capabilities</p>
+          <h2 class="section-heading">End-to-end UX for inclusive products</h2>
+          <a href="mailto:thilonikariyakarawana@gmail.com" class="btn btn-dark" id="services-cta">Work with me</a>
+        </div>
+        <div class="services-right">
+          <ul class="services-list">
+            <li class="service-item reveal stagger-1">
+              <div class="service-icon">🎯</div>
+              <div class="service-text">
+                <span class="service-name">Interaction Design</span>
+                <span class="service-desc">Designing intuitive, accessible user flows and interfaces</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-2">
+              <div class="service-icon">🖼</div>
+              <div class="service-text">
+                <span class="service-name">High-Fidelity Visuals</span>
+                <span class="service-desc">Pixel-perfect UI designs with consistent design systems</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-3">
+              <div class="service-icon">📱</div>
+              <div class="service-text">
+                <span class="service-name">Responsive Design</span>
+                <span class="service-desc">Mobile-first designs that work across all screen sizes</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-4">
+              <div class="service-icon">🔬</div>
+              <div class="service-text">
+                <span class="service-name">User Research</span>
+                <span class="service-desc">Usability testing, A/B testing, UX psychology & accessibility audits</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-5">
+              <div class="service-icon">♿</div>
+              <div class="service-text">
+                <span class="service-name">Accessibility</span>
+                <span class="service-desc">Inclusive design for diverse users and accessibility standards</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-6">
+              <div class="service-icon">📐</div>
+              <div class="service-text">
+                <span class="service-name">Design Systems</span>
+                <span class="service-desc">Scalable component libraries and consistent design tokens</span>
+              </div>
+            </li>
+            <li class="service-item reveal stagger-7">
+              <div class="service-icon">📊</div>
+              <div class="service-text">
+                <span class="service-name">Graphic Design</span>
+                <span class="service-desc">Brand-aligned promotional graphics and visual communication</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack reveal" id="tech-stack">
+        <p class="tech-label">My tools</p>
+        <div class="tech-logos">
+          <div class="tech-item reveal stagger-1">
+            <div class="tech-icon">
+              <svg viewBox="0 0 38 57" width="24" height="24" fill="none">
+                <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE"/>
+                <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="#0ACF83"/>
+                <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="#FF7262"/>
+                <path d="M0 9.5a9.5 9.5 0 0 0 9.5 9.5H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E"/>
+                <path d="M0 28.5a9.5 9.5 0 0 0 9.5 9.5H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF"/>
+              </svg>
+            </div>
+            <span>Figma</span>
+          </div>
+          <div class="tech-item reveal stagger-2">
+            <div class="tech-icon"><span style="font-size:18px;font-weight:800;color:#555">FJ</span></div>
+            <span>FigJam</span>
+          </div>
+          <div class="tech-item reveal stagger-3">
+            <div class="tech-icon">
+              <svg viewBox="0 0 14 21" width="20" height="20" fill="none">
+                <path d="M0 0h14v7H7L0 0z" fill="#000"/>
+                <path d="M0 7h7l7 7H7v7L0 7z" fill="#000"/>
+              </svg>
+            </div>
+            <span>Framer</span>
+          </div>
+          <div class="tech-item reveal stagger-4">
+            <div class="tech-icon"><span style="font-size:20px">🎨</span></div>
+            <span>Canva</span>
+          </div>
+          <div class="tech-item reveal stagger-5">
+            <div class="tech-icon"><span style="font-size:20px">📝</span></div>
+            <span>Notion</span>
+          </div>
+          <div class="tech-item reveal stagger-6">
+            <div class="tech-icon"><span style="font-size:20px">💡</span></div>
+            <span>Lovable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <div class="about-photo-wrapper">
+            <div class="about-photo-fallback" style="display:flex; font-size:72px; letter-spacing:-2px; background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">TK</div>
+          </div>
+          <p class="about-name">Thiloni Kariyakarawana</p>
+          <p class="about-title">Intern UX/UI Designer · Nugegoda, Sri Lanka</p>
+          <div class="about-work-history">
+            <p class="history-label">Experience</p>
+            <div class="history-item">
+              <div class="history-company">RenuXpert Esthetics</div>
+              <div class="history-role">Graphic Designer (Freelance)</div>
+              <div class="history-years">March 2024 – Present · Sterling, VA, US</div>
+            </div>
+            <div class="history-item">
+              <div class="history-company">Entre Club — USJ</div>
+              <div class="history-role">UI/UX Task Master</div>
+              <div class="history-years">March 2025 – 2026 (1 Year)</div>
+            </div>
+            <p class="history-label" style="margin-top:24px;">Education</p>
+            <div class="history-item">
+              <div class="history-company">Bsc (Hons) in Information Technology</div>
+              <div class="history-role">University of Sri Jayewardenepura</div>
+              <div class="history-years">2023 – Present · GPA 3.8 / 4.0</div>
+            </div>
+            <div class="history-item">
+              <div class="history-company">Diploma in Psychology</div>
+              <div class="history-role">SITC Campus</div>
+              <div class="history-years">2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal">
+          <p class="section-eyebrow">About me</p>
+          <h2 class="about-heading">Designing with empathy,<br/>validated by research.</h2>
+          <p class="about-bio">I'm Thiloni, an Intern UX/UI Designer based in Nugegoda, Sri Lanka, studying Information Technology at the University of Sri Jayewardenepura (GPA 3.8/4.0). I specialise in research-backed design — combining usability testing, A/B experiments, and design thinking to build products that are both beautiful and genuinely usable.</p>
+          <p class="about-bio">From digitizing manual university systems to running usability research with 152 participants, every project I take on is grounded in real user evidence and a passion for inclusive, accessible experiences.</p>
+
+          <!-- Certifications -->
+          <div class="certifications">
+            <p class="history-label">Certifications</p>
+            <div class="cert-list">
+              <div class="cert-item">
+                <span class="cert-icon">🏅</span>
+                <span>Foundations of User Experience (UX) Design — Google</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">🏅</span>
+                <span>Diploma in Psychology — SITC Campus, 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="signature" style="margin-top:36px; opacity:0.5;">
+            <svg viewBox="0 0 140 60" width="140" height="60" fill="none">
+              <path d="M10 48 Q20 10 35 38 Q45 55 55 25 Q62 8 75 32 Q85 48 98 28 Q108 14 120 38 Q128 52 135 42" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M12 54 Q40 46 70 50 Q100 54 130 48" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-left reveal">
+          <p class="section-eyebrow">FAQ</p>
+          <h2 class="section-heading">Common questions<br/>answered.</h2>
+          <a href="mailto:thilonikariyakarawana@gmail.com" class="btn btn-dark" id="schedule-btn">Get in touch</a>
+        </div>
+        <div class="faq-right">
+          <div class="faq-list" id="faq-list">
+            <div class="faq-item reveal stagger-1">
+              <button class="faq-question" id="faq-1">What kind of projects are you available for?<span class="faq-arrow">+</span></button>
+              <div class="faq-answer"><p>I'm open to UX/UI design projects, usability research, mobile app design, and freelance graphic design work. I'm especially passionate about projects focused on accessibility and inclusive design.</p></div>
+            </div>
+            <div class="faq-item reveal stagger-2">
+              <button class="faq-question" id="faq-2">What does your design process look like?<span class="faq-arrow">+</span></button>
+              <div class="faq-answer"><p>I follow the Design Thinking process: Empathise → Define → Ideate → Prototype → Test. Each phase is user-centred, with usability testing (both qualitative and quantitative) integral to every project.</p></div>
+            </div>
+            <div class="faq-item reveal stagger-3">
+              <button class="faq-question" id="faq-3">Can you work with international clients?<span class="faq-arrow">+</span></button>
+              <div class="faq-answer"><p>Absolutely — I've already collaborated with a US-based client (RenuXpert Esthetics, Sterling, VA) and am comfortable with remote collaboration across time zones.</p></div>
+            </div>
+            <div class="faq-item reveal stagger-4">
+              <button class="faq-question" id="faq-4">What tools do you use?<span class="faq-arrow">+</span></button>
+              <div class="faq-answer"><p>My primary design tool is Figma (including FigJam for workshops and ideation). I also use Framer for interactive prototypes, Canva for branded graphics, and Notion for project documentation.</p></div>
+            </div>
+            <div class="faq-item reveal stagger-5">
+              <button class="faq-question" id="faq-5">Are you open to internship or full-time roles?<span class="faq-arrow">+</span></button>
+              <div class="faq-answer"><p>Yes! I'm actively seeking internship and junior UX/UI designer roles. I'm eager to work in a collaborative environment where I can contribute my research skills and grow as a designer.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer-cta reveal">
+      <h2 class="footer-heading">Let's build something<br/>great together</h2>
+      <a href="mailto:thilonikariyakarawana@gmail.com" class="btn footer-btn" id="book-btn">Say Hello ↗</a>
+    </div>
+
+    <!-- Giant outlined decorative wordmark -->
+    <div class="footer-wordmark" aria-hidden="true">THILONI</div>
+
+    <div class="footer-bottom">
+      <p class="footer-email">thilonikariyakarawana@gmail.com</p>
+      <div class="footer-social">
+        <a href="https://www.behance.net" target="_blank" class="social-link" id="social-behance" aria-label="Behance">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.719-3.71h4.979c-.147-1.108-.81-2.129-2.376-2.129-1.502 0-2.318.773-2.603 2.129zM7.448 9.747C7.448 7.46 5.478 7 3.808 7H0v10h4.523c1.808 0 3.556-.911 3.556-2.924 0-1.352-.592-2.032-1.428-2.447.673-.343 1.797-.9 1.797-1.882Zm-5.9.55h2.166c.912 0 1.614.288 1.614 1.238 0 .95-.726 1.19-1.614 1.19H1.548v-2.428zm2.478 4.917H1.548v-2.607h2.5c1.123 0 1.685.44 1.685 1.313 0 .87-.552 1.294-1.707 1.294z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:thilonikariyakarawana@gmail.com" class="social-link" id="social-email" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="tel:+94706902787" class="social-link" id="social-phone" aria-label="Phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        </a>
+      </div>
+      <div class="footer-right">
+        <span class="footer-legal">+94 70 690 2787</span>
+        <span class="footer-legal">Nugegoda, Sri Lanka</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

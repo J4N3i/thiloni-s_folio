@@ -90,9 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- Navbar Scroll-Hide/Show Logic ---- */
+  /* ---- Navbar Scroll Shrink Logic ---- */
   const navbar = document.getElementById('navbar');
-  let lastScrollY = window.scrollY;
 
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
@@ -104,15 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.style.boxShadow = 'none';
     }
 
-    // Hide/Show logic
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    // Shrink logic (scroll > 50px)
+    if (currentScrollY > 50) {
       if (!navLinks.classList.contains('open')) {
-        navbar.classList.add('hidden-nav');
+        navbar.classList.add('shrunk');
       }
     } else {
-      navbar.classList.remove('hidden-nav');
+      navbar.classList.remove('shrunk');
     }
-    lastScrollY = currentScrollY;
   }, { passive: true });
 
   /* ---- Hero CTA gap expansion on hover ---- */

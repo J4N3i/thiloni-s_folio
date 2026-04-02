@@ -138,4 +138,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Floating Speak Widget Logic ---- */
+  const speakWrapper = document.getElementById('speak-wrapper');
+  const speakWidget = document.getElementById('speak-widget');
+
+  if (speakWrapper && speakWidget) {
+    // 1. Entrance animation (1.5s delay)
+    setTimeout(() => {
+      speakWrapper.classList.add('entered');
+    }, 1500);
+
+    // 2. Hide at absolute bottom
+    window.addEventListener('scroll', () => {
+      const scrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+      if (scrolledToBottom) {
+        speakWrapper.classList.add('hidden');
+      } else {
+        speakWrapper.classList.remove('hidden');
+      }
+    }, { passive: true });
+
+    // 3. Magnetic Hover Effect
+    const triggerDistance = 30;
+    
+    document.addEventListener('mousemove', (e) => {
+      if (!speakWrapper.classList.contains('entered') || speakWrapper.classList.contains('hidden')) return;
+
+      const rect = speakWrapper.getBoundingClientRect();
+      const dx = Math.max(rect.left - e.clientX, 0, e.clientX - rect.right);
+      const dy = Math.max(rect.top - e.clientY, 0, e.clientY - rect.bottom);
+      const distToEdge = Math.sqrt(dx * dx + dy * dy);
+
+      if (distToEdge < triggerDistance || (dx === 0 && dy === 0)) {
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        const maxPull = 15;
+        const pullX = ((e.clientX - centerX) / (rect.width / 2 + triggerDistance)) * maxPull;
+        const pullY = ((e.clientY - centerY) / (rect.height / 2 + triggerDistance)) * maxPull;
+        
+        const scale = (dx === 0 && dy === 0) ? 1.05 : 1;
+        
+        speakWidget.style.transform = `translateX(${pullX}px) translateY(${pullY}px) scale(${scale})`;
+      } else {
+        speakWidget.style.transform = `translateX(0) translateY(0) scale(1)`;
+      }
+    });
+
+    speakWidget.addEventListener('mouseleave', () => {
+      speakWidget.style.transform = `translateX(0) translateY(0) scale(1)`;
+    });
+  }
+
 });

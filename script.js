@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
   handleParallax(); // initial call
 
   /* ---- FAQ Accordion with spring ---- */
-  const faqItems = document.querySelectorAll('.faq-item');
+  const faqItems = document.querySelectorAll('.faq-item-new');
   faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question');
+    const btn = item.querySelector('.faq-question-new');
     btn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
       faqItems.forEach(i => i.classList.remove('active'));

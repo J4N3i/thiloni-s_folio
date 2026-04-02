@@ -224,4 +224,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Contact Heading Word Cycle ---- */
+  const cycleWord = document.getElementById('fn-cycle-word');
+  if (cycleWord) {
+    const words = ['design', 'create', 'build'];
+    let wordIndex = 0;
+
+    setInterval(() => {
+      cycleWord.classList.add('cycling-out');
+      setTimeout(() => {
+        wordIndex = (wordIndex + 1) % words.length;
+        cycleWord.textContent = words[wordIndex];
+        cycleWord.classList.remove('cycling-out');
+      }, 200);
+    }, 1500);
+  }
+
 });

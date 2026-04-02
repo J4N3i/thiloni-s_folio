@@ -1487,7 +1487,8 @@ img { max-width: 100%; height: auto; display: block; }
   .projects-grid         { grid-template-columns: 1fr; }
   .services-layout       { grid-template-columns: 1fr; }
   .about-layout          { grid-template-columns: 1fr; }
-  .faq-layout            { grid-template-columns: 1fr; }
+  .faq-layout-new        { grid-template-columns: 1fr; gap: 48px; }
+  .faq-right-new         { position: static; top: 0; }
   .work-header           { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-wordmark       { font-size: clamp(60px, 18vw, 160px); }
 }
@@ -1501,6 +1502,11 @@ img { max-width: 100%; height: auto; display: block; }
   :root { --section-pad: 80px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  
+  /* Prevent logo text overlap on small mobiles */
+  .nav-logo span { display: none; }
+  .nav-logo { gap: 0; }
+
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: calc(100% + 12px); left: 0; right: 0;
@@ -1512,7 +1518,7 @@ img { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 12px 48px rgba(0,0,0,0.1);
   }
   .nav-links.open a {
-    opacity: 0;
+    opacity: 1; /* Fixed opacity for visibility */
     width: 100%; text-align: center; font-size: 16px;
   }
   .hero { padding: 120px 24px 80px; }
@@ -1521,6 +1527,11 @@ img { max-width: 100%; height: auto; display: block; }
   .trusted-label, .work-header, .work-cta-row, .footer-cta, .footer-bottom { padding-left: 24px; padding-right: 24px; }
   .projects-grid { padding: 0 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  
+  /* FAQ adjustments */
+  .faq-section-new { padding: 80px 0; }
+  .faq-heading-new { margin-bottom: 40px; }
+  .faq-answer-new p { padding: 0 20px 20px 48px; font-size: 14px; }
 }
 
 /* ============ SPEAK WIDGET ============ */

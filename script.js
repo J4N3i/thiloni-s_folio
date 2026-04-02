@@ -202,4 +202,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Work History Expand Logic ---- */
+  const historyBtn = document.getElementById('showAllHistoryBtn');
+  const historyContainer = document.getElementById('workHistoryContainer');
+  
+  if (historyBtn && historyContainer) {
+    historyBtn.addEventListener('click', () => {
+      const isExpanded = historyContainer.classList.contains('expanded');
+      
+      if (isExpanded) {
+        historyContainer.classList.remove('expanded');
+        historyBtn.classList.remove('expanded');
+        const textSpan = historyBtn.querySelector('.btn-text');
+        if (textSpan) textSpan.textContent = 'Show all';
+      } else {
+        historyContainer.classList.add('expanded');
+        historyBtn.classList.add('expanded');
+        const textSpan = historyBtn.querySelector('.btn-text');
+        if (textSpan) textSpan.textContent = 'Show less';
+      }
+    });
+  }
+
 });

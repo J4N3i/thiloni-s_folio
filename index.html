@@ -273,21 +273,51 @@
           
           <div class="about-work-history-new">
             <p class="history-label-new">My work history</p>
-            <div class="work-history-card-container">
-               <div class="work-history-card">
+            <div class="work-history-card-container" id="workHistoryContainer">
+               <div class="work-history-card" style="z-index: 4;">
                  <div class="history-company-new">RenuXpert Esthetics</div>
                  <div class="history-role-row">
                    <span class="history-role-new">Graphic Designer</span>
                    <span class="history-years-new">2024-Present</span>
                  </div>
                </div>
+               
+               <div class="work-history-extra" id="workHistoryExtra">
+                 <div class="work-history-card inner-card">
+                   <div class="history-company-new">Entre Club — USJ</div>
+                   <div class="history-role-row">
+                     <span class="history-role-new">UI/UX Task Master</span>
+                     <span class="history-years-new">2025-2026</span>
+                   </div>
+                 </div>
+                 
+                 <p class="history-label-new" style="margin-top: 24px; font-size: 14px; margin-bottom: 8px;">Education</p>
+                 
+                 <div class="work-history-card inner-card">
+                   <div class="history-company-new">Bsc in Info Technology</div>
+                   <div class="history-role-row">
+                     <span class="history-role-new">USJ</span>
+                     <span class="history-years-new">2023-Present</span>
+                   </div>
+                 </div>
+                 
+                 <div class="work-history-card inner-card" style="margin-top: 8px;">
+                   <div class="history-company-new">Diploma in Psychology</div>
+                   <div class="history-role-row">
+                     <span class="history-role-new">SITC Campus</span>
+                     <span class="history-years-new">2025</span>
+                   </div>
+                 </div>
+               </div>
+
                <div class="work-history-card-shadow-1"></div>
                <div class="work-history-card-shadow-2"></div>
             </div>
             
             <div class="show-all-container">
-              <button class="show-all-btn">Show all 
-                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <button class="show-all-btn" id="showAllHistoryBtn">
+                <span class="btn-text">Show all</span> 
+                <svg class="btn-icon" width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
               </button>
             </div>
           </div>

@@ -818,6 +818,7 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   z-index: 2;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .work-history-card-shadow-2 {
@@ -830,6 +831,27 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.04);
   z-index: 1;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work-history-extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateY(-20px);
+}
+
+.work-history-card-container.expanded .work-history-extra {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-history-card-container.expanded .work-history-card-shadow-1,
+.work-history-card-container.expanded .work-history-card-shadow-2 {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
 }
 
 .show-all-container {
@@ -857,6 +879,14 @@ img { max-width: 100%; height: auto; display: block; }
 .show-all-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.show-all-btn .btn-icon {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.show-all-btn.expanded .btn-icon {
+  transform: rotate(-180deg);
 }
 
 .about-bio-new {

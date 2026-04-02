@@ -213,13 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isExpanded) {
         historyContainer.classList.remove('expanded');
         historyBtn.classList.remove('expanded');
-        const textSpan = historyBtn.querySelector('.btn-text');
+        const textSpan = historyBtn.querySelector('.history-btn-text');
         if (textSpan) textSpan.textContent = 'Show all';
       } else {
         historyContainer.classList.add('expanded');
         historyBtn.classList.add('expanded');
-        const textSpan = historyBtn.querySelector('.btn-text');
-        if (textSpan) textSpan.textContent = 'Show less';
+        const textSpan = historyBtn.querySelector('.history-btn-text');
+        if (textSpan) textSpan.textContent = 'Hide';
       }
     });
   }

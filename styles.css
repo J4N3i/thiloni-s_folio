@@ -450,6 +450,49 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .view-all-link:hover { opacity: 0.5; }
 
+/* ============ PROJECT CARD WIDE (Project 3 full-width) ============ */
+.project-card-wide {
+  grid-column: 1 / -1;
+  border-radius: var(--radius-lg);
+  background: #f7f7f7;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: stretch;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card-wide:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+.project-card-wide-image {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+.project-card-wide-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+.project-card-wide:hover .project-card-wide-image img { transform: scale(1.05); }
+
+.project-info-wide {
+  padding: 40px 48px;
+}
+
+@media (max-width: 840px) {
+  .project-card-wide {
+    grid-template-columns: 1fr;
+  }
+  .project-card-wide-image {
+    aspect-ratio: 16/10;
+  }
+  .project-info-wide {
+    padding: 28px;
+  }
+}
+
 /* ============ TESTIMONIAL ============ */
 .testimonial-section {
   padding: var(--section-pad) 0;

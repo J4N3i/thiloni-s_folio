@@ -143,14 +143,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const speakWidget = document.getElementById('speak-widget');
 
   if (speakWrapper && speakWidget) {
-    // 1. Entrance animation (1.5s delay)
-    setTimeout(() => {
-      speakWrapper.classList.add('entered');
-    }, 1500);
-
-    // 2. Hide at absolute bottom
+    const heroSection = document.querySelector('.hero');
+    
+    // Entrance & Footer Hide Logic
     window.addEventListener('scroll', () => {
-      const scrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.offsetHeight;
+      
+      const triggerPoint = heroSection ? heroSection.offsetHeight * 0.8 : 500;
+      
+      if (scrollY > triggerPoint) {
+        speakWrapper.classList.add('entered');
+      } else {
+        speakWrapper.classList.remove('entered');
+      }
+
+      const scrolledToBottom = scrollY + windowHeight >= documentHeight - 100;
       if (scrolledToBottom) {
         speakWrapper.classList.add('hidden');
       } else {

@@ -813,64 +813,78 @@ img { max-width: 100%; height: auto; display: block; }
   bottom: -100px !important;
 }
 
-.floating-speak-widget {
+.floating-speak-widget.new-design {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  background: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 24px;
+  padding: 8px 8px 8px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 100px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   pointer-events: auto;
   text-decoration: none;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   will-change: transform;
 }
 
-.speak-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #222;
-  color: #fff;
-  font-size: 11px;
+.speak-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.speak-title {
+  font-family: var(--font-head);
+  font-size: 16px;
   font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.speak-subtitle {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.2;
+}
+
+.speak-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speak-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.speak-text {
-  font-family: var(--font-head);
-  font-size: 14px;
-  font-weight: 500;
+.speak-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.speak-btn:hover {
+  transform: scale(1.08);
+}
+
+.btn-email {
+  background: #000000;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-.speak-typing {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  margin-right: 4px;
-}
-
-.speak-typing .s-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
+.btn-calendar {
   background: #ffffff;
-  opacity: 0.4;
-  animation: speakPulse 1.2s infinite ease-in-out both;
-}
-.speak-typing .s-dot:nth-child(1) { animation-delay: 0s; }
-.speak-typing .s-dot:nth-child(2) { animation-delay: 0.15s; }
-.speak-typing .s-dot:nth-child(3) { animation-delay: 0.3s; }
-
-@keyframes speakPulse {
-  0%, 80%, 100% { opacity: 0.4; transform: translateY(0); }
-  40% { opacity: 1; transform: translateY(-3px); }
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }

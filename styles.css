@@ -819,20 +819,26 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
   gap: 24px;
   padding: 8px 8px 8px 24px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 100px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   pointer-events: auto;
   text-decoration: none;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  will-change: transform;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, padding, gap;
 }
 
 .speak-info {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  overflow: hidden;
+  max-width: 200px;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .speak-title {
@@ -842,6 +848,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: #111111;
   letter-spacing: -0.01em;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .speak-subtitle {
@@ -850,6 +857,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 500;
   color: #666666;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .speak-actions {
@@ -859,22 +867,44 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .speak-btn {
+  height: 44px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: flex-start;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.icon-wrap {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
 }
 
-.speak-btn svg {
+.icon-wrap svg {
   width: 18px;
   height: 18px;
 }
 
-.speak-btn:hover {
-  transform: scale(1.08);
+.speak-widget-wrapper.magnetic-hover .speak-btn:hover {
+  transform: scale(1.05); /* Only scale buttons if parent is magnetized */
+}
+
+.btn-text {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-email {
@@ -887,4 +917,29 @@ img { max-width: 100%; height: auto; display: block; }
   background: #ffffff;
   color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ============ MAGNETIC MORPH HOVER STATE ============ */
+.speak-widget-wrapper.magnetic-hover .floating-speak-widget.new-design {
+  padding: 8px; /* Contract left padding */
+  gap: 8px; /* Draw buttons closer to vanishing text */
+  background: rgba(255, 255, 255, 0.88); /* Decrease transparency slightly */
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+}
+
+.speak-widget-wrapper.magnetic-hover .speak-info {
+  max-width: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  gap: 0;
+}
+
+.speak-widget-wrapper.magnetic-hover .speak-btn {
+  padding: 0 20px 0 0; /* Add text space */
+}
+
+.speak-widget-wrapper.magnetic-hover .btn-text {
+  max-width: 120px;
+  opacity: 1;
+  margin-left: 6px;
 }

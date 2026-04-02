@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const distToEdge = Math.sqrt(dx * dx + dy * dy);
 
       if (distToEdge < triggerDistance || (dx === 0 && dy === 0)) {
+        speakWrapper.classList.add('magnetic-hover');
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         
@@ -190,11 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         speakWidget.style.transform = `translateX(${pullX}px) translateY(${pullY}px) scale(${scale})`;
       } else {
+        speakWrapper.classList.remove('magnetic-hover');
         speakWidget.style.transform = `translateX(0) translateY(0) scale(1)`;
       }
     });
 
     speakWidget.addEventListener('mouseleave', () => {
+      speakWrapper.classList.remove('magnetic-hover');
       speakWidget.style.transform = `translateX(0) translateY(0) scale(1)`;
     });
   }

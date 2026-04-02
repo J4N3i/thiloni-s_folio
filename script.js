@@ -51,11 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- Mobile Nav Toggle ---- */
+  /* ---- Mobile Nav Toggle with Stagger ---- */
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('nav-links');
+  const navItems  = navLinks?.querySelectorAll('a');
+  
   hamburger?.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    
+    if (navLinks.classList.contains('open')) {
+      // Apply stagger fade-in
+      navItems?.forEach((item, index) => {
+        item.style.animation = `mobileLinkFadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards ${index * 0.05}s`;
+      });
+    } else {
+      // Reset animation
+      navItems?.forEach(item => {
+        item.style.animation = 'none';
+      });
+    }
   });
 
   /* ---- Smooth scroll for anchor links ---- */
@@ -66,20 +81,38 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const offset = 68; // navbar height
+        const offset = 100; // floating navbar height + padding
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
         navLinks?.classList.remove('open');
+        hamburger?.classList.remove('open');
       }
     });
   });
 
-  /* ---- Navbar — shadow on scroll ---- */
+  /* ---- Navbar Scroll-Hide/Show Logic ---- */
   const navbar = document.getElementById('navbar');
+  let lastScrollY = window.scrollY;
+
   window.addEventListener('scroll', () => {
-    navbar.style.boxShadow = window.scrollY > 10
-      ? '0 2px 20px rgba(0,0,0,0.07)'
-      : 'none';
+    const currentScrollY = window.scrollY;
+    
+    // Add subtle shadow when not at top
+    if (currentScrollY > 10) {
+      navbar.style.boxShadow = '0 12px 48px rgba(0,0,0,0.06)';
+    } else {
+      navbar.style.boxShadow = 'none';
+    }
+
+    // Hide/Show logic
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (!navLinks.classList.contains('open')) {
+        navbar.classList.add('hidden-nav');
+      }
+    } else {
+      navbar.classList.remove('hidden-nav');
+    }
+    lastScrollY = currentScrollY;
   }, { passive: true });
 
   /* ---- Hero CTA gap expansion on hover ---- */

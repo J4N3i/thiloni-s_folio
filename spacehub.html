@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpaceHub — University Room Booking App · Case Study</title>
+  <meta name="description"
+    content="SpaceHub — a UX/UI case study for a university room booking app by Thiloni Kariyakarawana. Design Thinking, usability testing, and validated prototypes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cs-topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .cs-topbar-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cs-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 700; font-size: 15px; color: var(--dark);
+      text-decoration: none;
+    }
+    .cs-back:hover { opacity: 0.65; }
+    .cs-topbar-name { font-weight: 700; font-size: 15px; color: var(--gray); }
+
+    .cs-header {
+      max-width: 860px; margin: 0 auto;
+      padding: 72px 24px 40px;
+      text-align: center;
+    }
+    .cs-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gray-muted);
+      margin-bottom: 18px;
+    }
+    .cs-title {
+      font-size: clamp(40px, 7vw, 68px);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1.02;
+      margin-bottom: 14px;
+    }
+    .cs-subtitle {
+      font-size: clamp(17px, 2.4vw, 21px);
+      color: var(--gray); line-height: 1.5;
+      max-width: 620px; margin: 0 auto 28px;
+    }
+    .cs-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .cs-tag {
+      font-size: 13px; font-weight: 600; color: var(--dark);
+      background: #f4f4f4; border-radius: var(--radius-pill);
+      padding: 7px 15px;
+    }
+
+    .cs-gallery {
+      max-width: 860px; margin: 0 auto;
+      padding: 24px 24px 80px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .cs-gallery img {
+      width: 100%; height: auto; display: block;
+      border-radius: var(--radius-img);
+      box-shadow: var(--shadow);
+    }
+
+    .cs-footer {
+      border-top: 1px solid var(--gray-light);
+      text-align: center;
+      padding: 64px 24px 80px;
+    }
+    .cs-footer h3 {
+      font-size: clamp(24px, 4vw, 34px); font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 22px;
+    }
+    .cs-footer-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="cs-topbar">
+    <div class="cs-topbar-inner">
+      <a href="index.html#work" class="cs-back">← Back to portfolio</a>
+      <span class="cs-topbar-name">Thiloni Kariyakarawana</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="cs-header">
+    <p class="cs-eyebrow">Case Study</p>
+    <h1 class="cs-title">SpaceHub</h1>
+    <p class="cs-subtitle">A university room booking app — digitizing a fully manual system using the Design Thinking
+      cycle, validated with real users at 0 critical errors and task completion under 60 seconds.</p>
+    <div class="cs-tags">
+      <span class="cs-tag">UX/UI Design</span>
+      <span class="cs-tag">User Research</span>
+      <span class="cs-tag">Design Thinking</span>
+      <span class="cs-tag">Usability Testing</span>
+      <span class="cs-tag">Figma</span>
+    </div>
+  </header>
+
+  <!-- Case study images -->
+  <main class="cs-gallery">
+    <img src="spacehub-1.jpg" alt="SpaceHub — hero, about and user problem" loading="lazy" />
+    <img src="spacehub-2.jpg" alt="SpaceHub — solutions, design thinking, empathy map and user persona"
+      loading="lazy" />
+    <img src="spacehub-3.jpg" alt="SpaceHub — user flow and wireframes" loading="lazy" />
+    <img src="spacehub-4.jpg" alt="SpaceHub — transforming research into solutions, splash screen" loading="lazy" />
+    <img src="spacehub-5.jpg" alt="SpaceHub — onboarding, authentication and filter-first approach" loading="lazy" />
+    <img src="spacehub-6.jpg" alt="SpaceHub — booking flow, summary, management and account" loading="lazy" />
+    <img src="spacehub-7.jpg" alt="SpaceHub — light mode vs dark mode screens" loading="lazy" />
+    <img src="spacehub-8.jpg" alt="SpaceHub — style guide, usability testing and results" loading="lazy" />
+  </main>
+
+  <!-- Footer CTA -->
+  <footer class="cs-footer">
+    <h3>Lets design incredible work together.</h3>
+    <div class="cs-footer-actions">
+      <a href="mailto:thilonikariyakarawana@gmail.com" class="btn btn-dark">Let's connect</a>
+      <a href="index.html#work" class="btn btn-outline">Back to projects</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
